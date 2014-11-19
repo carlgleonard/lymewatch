@@ -1,0 +1,13 @@
+.content
+  .container
+    .row
+      .col-md-12
+        %form{:role => "form", :action => "/login", :method => "post"}
+          %h1= 'Login'
+          .form-group
+            %label{ :for => "email"} Email:
+            %input.form-control{ :name => "email", :type => "text", :size => "30"}
+          .form-group
+            %label{ :for => "password"} Password:
+            %input.form-control{ :name => "password", :type => "password", :size => "30"}
+          %input.btn-lg.btn-primary{ :name => "submit", :type => "submit", :value => "Submit"}

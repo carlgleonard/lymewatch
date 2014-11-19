@@ -1,0 +1,11 @@
+.content
+  .container
+    .row
+      .col-md-12
+        %form{:role => "form", :action => "/login", :method => "post"}
+          %h1= 'Login'
+          .form-group
+            %label{ :for => "email"} Email:
+            %input.form-control{ :name => "email", :type => "text", :size => "30"}
+            :plain
+              Click <a href="http://www.yahoo.com">here</a> to go to yahoo. Some text <b>or HTML</b>.

@@ -1,0 +1,19 @@
+.content
+  .container
+    .row
+      .col-md-12
+        %form{:role => "form", :action => "/login", :method => "post"}
+          %h1= 'ShowIt'
+          .form-group
+            %label{ :for => "name"} Name:
+            %input.form-control{ :name => "name", :type => "text", :size => "30"}
+          .form-group
+            %label{ :for => "address"} Address:
+            %input.form-control{ :name => "address", :type => "text", :size => "30"}
+          .form-group
+            %label{ :for => "city"} City:
+            %input.form-control{ :name => "city", :type => "text", :size => "30"}			
+          .form-group
+            %label{ :for => "state"} State:
+            %input.form-control{ :name => "state", :type => "text", :size => "30"}
+          %input.btn-lg.btn-primary{ :name => "submit", :type => "submit", :value => "Submit"}

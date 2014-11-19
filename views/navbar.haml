@@ -1,0 +1,34 @@
+.navbar.navbar-fixed-top.navbar-inverse
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-toggle".to_sym => "collapse", "data-target".to_sym => ".navigation-collapse"}
+        %span.sr-only Toggle Navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => '/'} LymeWatch
+    %div.navbar-collapse.collapse.navigation-collapse
+      %ul.nav.navbar-nav
+        %li
+          %a{:href => '/'}About
+        %li
+          %a{:href => '/venue'}Your Risk
+        %li
+          %a{:href => '/venue'}Locations
+        %li
+          %a{:href => '/display'}LymeTweets		  
+        %li
+          %a{:href => '/display'}Your Story
+        %li
+          %a{:href => '/register'}Join		  
+      %div.navbar-header.navbar-right
+        %p.navbar-text
+          -if logged_in?
+            %a{:href => "/user/" << @suser.email.to_s << "/dashboard"}
+              %image{:height => 30, :width => 30, :src => "http://www.gravatar.com/avatar/" << @suser.email_hash.to_s << '.png' }
+              #{@suser.email}
+            |
+            %a{:href => "/logout" } Logout
+
+          -else
+            %a{:href => '/login'} Login

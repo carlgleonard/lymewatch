@@ -1,0 +1,38 @@
+.container
+  .row
+    .col-md-8
+      %h1 Welcome to LymeWatch
+      %img{:src => 'images/big_map.png'}
+      %p 
+      %p LymeWatch is the best web app for learning and sharing your experiences about Lyme disease.
+
+    .col-md-4
+      .well
+        -if logged_in?
+          You are logged in. Share your experience.
+        -else
+          %h3 Login
+          %form{:role => "form", :action => "/login", :method => "post"}
+            %br
+            .form-group
+              %label{ :for => "email"} Email:
+              %input.form-control{ :name => "email", :type => "text", :size => "30"}
+            .form-group
+              %label{ :for => "password"} Password:
+              %input.form-control{ :name => "password", :type => "password", :size => "30"}
+            %input.btn-lg.btn-primary{ :name => "submit", :type => "submit", :value => "Submit"}
+
+      -if !logged_in?
+        .well
+          %h3 Join
+          %form{:role => "form", :action => "/register", :method => "post"}
+            .form-group
+              %label{ :for => "name"} Name:
+              %input.form-control{ :name => "name", :type => "text", :size => "30"}
+            .form-group
+              %label{ :for => "email"} Email:
+              %input.form-control{ :name => "email", :type => "text", :size => "30"}
+            .form-group
+              %label{ :for => "password"} Password:
+              %input.form-control{ :name => "password", :type => "password", :size => "30"}
+            %input.btn.btn-default{ :name => "submit", :type => "submit", :value => "Submit"}

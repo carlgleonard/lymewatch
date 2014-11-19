@@ -1,0 +1,16 @@
+.content
+  .container
+    .row
+      .col-md-12
+        %form{:role => "form", :action => "/login", :method => "post"}
+          %h1= 'The Form Page'
+          .form-group
+            %label{ :for => "email"} Top One:
+            %input.form-control{ :name => "email", :type => "text", :size => "30"}
+          .form-group
+            %label{ :for => "email"} Middle One:
+            %input.form-control{ :name => "email", :type => "text", :size => "30"}
+          .form-group
+            %label{ :for => "password"} Secure Bottom One:
+            %input.form-control{ :name => "password", :type => "password", :size => "30"}
+          %input.btn-lg.btn-primary{ :name => "submit", :type => "submit", :value => "Submit"}

@@ -1,0 +1,26 @@
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title LymeWatch :: An app to share about Lyme disease
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "author", :content => ""}
+    %link{ :href => "/bootstrap/css/bootstrap.min.css", :type => "text/css", :rel => "stylesheet" }
+    %link{ :href => "/css/styles.css", :type => "text/css", :rel => "stylesheet" }
+    %link{ rel: "shortcut icon", href: "/favicon.ico"}
+
+  %body
+
+    %div= haml :navbar
+    #wrap
+      #main.body
+        =show_flash
+        %div= yield
+
+    -#%hr
+    %footer= haml :footer
+
+
+
+    -#Placed at the end of the document so the pages load faster
+    %script{ :type => "text/javascript", :src =>"/bootstrap/js/jquery.min.js"}
+    %script{ :type => "text/javascript", :src =>"/bootstrap/js/bootstrap.min.js"}

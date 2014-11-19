@@ -1,0 +1,12 @@
+.content
+  .container
+    .row
+      .col-md-12
+        %form{:role => "form", :action => "/login", :method => "post"}
+          %h1= 'Login'
+          .form-group
+            %label{ :for => "email"} Email:
+            %input.form-control{ :name => "email", :type => "text", :size => "30"}
+            .header
+              hello
+              = File.read "./views/c.html"

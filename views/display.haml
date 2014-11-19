@@ -1,0 +1,10 @@
+.content
+  .container
+    .row
+      .col-md-12
+        %form{:role => "form", :action => "/login", :method => "post"}
+          %h1= 'Lyme Disease'
+          .form-group
+            %label{ :for => "email"} Tweets Right Now:
+            .header
+              = File.read "./views/c.html"

@@ -1,0 +1,5 @@
+applications:
+- name: lyme-app-proto
+  memory: 256M
+  services:
+  - lymeproto
