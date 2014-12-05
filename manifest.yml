@@ -1,5 +1,5 @@
 applications:
-- name: lyme-app-proto
+- name: lymewatch1
   memory: 256M
   services:
   - lymeproto

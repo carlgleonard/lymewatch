@@ -1,13 +1,12 @@
 require 'mongo'
 require './model/mongoModule'
 require './model/user'
+#require './model/venue'
+#require './model/checkin'
 
-# Connection code goes here
-CONNECTION = Mongo::Connection.new("localhost")
-DB         = CONNECTION.db('lymeproto')
+DB = Mongo::Connection.new("localhost", 27017).db('lymeproto')
 
-# Alias to collections goes here
 USERS      = DB['users']
 VENUES     = DB['venues']
 CHECKINS   = DB['checkins']
-ADDYS      = DB['addys']
+#VENUES.ensure_index([["location.geo", Mongo::GEO2D]])
